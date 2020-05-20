@@ -1,0 +1,2 @@
+class Caritem < ApplicationRecord
+end

@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+
   namespace :users do
      root to: 'homes#top'
+     resources :items,ony:[:index, :show]
   end
   namespace :admin do
     get 'homes/top'
+    resources :items
   end
   devise_for :admins, controllers: {
   sessions:      'admins/sessions',
