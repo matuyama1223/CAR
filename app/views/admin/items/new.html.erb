@@ -1,2 +1,14 @@
-<h1>Admin::Items#new</h1>
-<p>Find me in app/views/admin/items/new.html.erb</p>
+<h1> 車新規登録</h1>
+
+<%= form_for(@caritem, url:admin_items_path) do |f| %>
+
+<P>名前</P>
+<%= f.text_field :name %>
+<p>内容</p>
+<%= f.text_area :text,size: "20x5" %>
+<p>値段</p>
+<%= f.number_field :price %>
+<p>画像</p>
+<%= f.attachment_field :carimage %>
+<%= f.submit '保存'%>
+<%end%>

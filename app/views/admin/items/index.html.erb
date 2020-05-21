@@ -1,2 +1,23 @@
-<h1>Admin::Items#index</h1>
-<p>Find me in app/views/admin/items/index.html.erb</p>
+<h1>車販売一覧 </h1>
+<table>
+	<thead>
+			<tr>
+				<th>ID</th>
+				<th>メーカ名</th>
+				<th>税抜価格</th>
+				<th>内容</th>
+				<th></th>
+			</tr>
+	</thead>
+
+<tbody>
+<% @caritems.each do |car| %>
+<tr>
+<td><%= car.id %></td>
+<td><%= car.name %></td>
+<td><%= car.price %></td>
+<td><%= car.text %></td>
+</tr>
+<%end%>
+</tbody>
+</table>
