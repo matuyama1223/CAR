@@ -2,9 +2,11 @@ class Admin::ItemsController < ApplicationController
   def index
   	@caritems = Caritem.all
 
+
   end
 
   def show
+  	@caritem = Caritem.find(params[:id])
   end
 
   def new
@@ -12,6 +14,7 @@ class Admin::ItemsController < ApplicationController
   end
 
   def edit
+  	@caritem = Caritem.find(params[:id])
   end
 
   def create

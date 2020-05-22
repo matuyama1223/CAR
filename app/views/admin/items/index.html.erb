@@ -13,11 +13,14 @@
 <tbody>
 <% @caritems.each do |car| %>
 <tr>
+
 <td><%= car.id %></td>
-<td><%= car.name %></td>
+<td><%= car.name%></td>
 <td><%= car.price %></td>
 <td><%= car.text %></td>
+<td><%=link_to"詳細",admin_item_path(car.id)%></td>
 </tr>
 <%end%>
+
 </tbody>
 </table>
