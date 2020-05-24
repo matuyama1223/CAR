@@ -1,8 +1,6 @@
 class Admin::ItemsController < ApplicationController
   def index
   	@caritems = Caritem.all
-
-
   end
 
   def show
@@ -22,6 +20,12 @@ class Admin::ItemsController < ApplicationController
   	@caritem.save
   	redirect_to admin_item_path(@caritem)
   end
+  def update
+    @caritem=Caritem.find(params[:id])
+    @caritem.update(caritem_params)
+    redirect_to admin_items_path(@caritem)
+  end
+
 
   private
   def caritem_params

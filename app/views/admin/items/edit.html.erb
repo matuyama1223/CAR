@@ -1,5 +1,5 @@
 <h1>編集</h1>
-<%= form_for(@caritem, url:admin_items_path) do |f| %>
+<%= form_for @caritem, url:admin_item_path(@caritem) do |f| %>
 
 <P>名前</P>
 <%= f.text_field :name %>
@@ -8,6 +8,7 @@
 <p>値段</p>
 <%= f.number_field :price %>
 <p>画像</p>
+<%= attachment_image_tag @caritem, :carimage %>
 <%= f.attachment_field :carimage %>
 <%= f.submit '保存'%>
 <%end%>

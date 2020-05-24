@@ -1,15 +1,27 @@
-<h1>Admin::Items#show</h1>
+<h1>詳細 </h1>
+<table>
 
-
-
-
-
-
-
-
-
-
-
+	<tr>
+		<th>ID</th>
+		<td><%= @caritem.id %></td>
+	</tr>
+	<tr>
+		<th>メーカ名</th>
+		<td><%= @caritem.name%></td>
+	</tr>
+	<tr>
+		<th>税抜価格</th>
+		<td><%= @caritem.price %></td>
+	</tr>
+	<tr>
+		<th>内容</th>
+		<td><%= @caritem.text %></td>
+	</tr>
+	<tr>
+		<th>画像</th>
+		<td><%= attachment_image_tag @caritem, :carimage %></td>
+	</tr>
+</table>
 
 
 <%=link_to"編集", edit_admin_item_path(@caritem)%>
