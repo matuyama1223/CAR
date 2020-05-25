@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   namespace :users do
      root to: 'homes#top'
-     resources :items,ony:[:index, :show]
+     resources :items
   end
   namespace :admin do
     get 'homes/top'

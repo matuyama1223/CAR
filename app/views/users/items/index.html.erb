@@ -1,2 +1,9 @@
-<h1>Users::Items#index</h1>
-<p>Find me in app/views/users/items/index.html.erb</p>
+<% @caritems.each do |car| %>
+<%= attachment_image_tag @caritem, :carimage, :fill, 550,550 %>
+<%= car.name%>
+<%= car.price %>
+<%= car.text %>
+<%end%>
+
+
+
