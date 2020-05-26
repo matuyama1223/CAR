@@ -1,9 +1,27 @@
+<h1>車一覧 </h1>
+<table>
+	<thead>
+			<tr>
+				<th>メーカ名</th>
+				<th>税抜価格</th>
+				<th>内容</th>
+				<th></th>
+			</tr>
+	</thead>
+
+<tbody>
 <% @caritems.each do |car| %>
-<%= attachment_image_tag @caritem, :carimage, :fill, 550,550 %>
-<%= car.name%>
-<%= car.price %>
-<%= car.text %>
+<tr>
+
+<td><%= car.name%></td>
+<td><%= car.price %></td>
+<td><%= car.text %></td>
+
+<td><%= link_to users_item_path(car.id)do%>
+	<%= attachment_image_tag car, :carimage, :fill, 40,50 %></td>
+	<%end%>
+</tr>
 <%end%>
 
-
-
+</tbody>
+</table>
