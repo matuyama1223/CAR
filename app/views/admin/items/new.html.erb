@@ -11,8 +11,8 @@
 <p>画像</p>
 <%= f.attachment_field :carimage %>
 <<p>年式</p>
-<%= f.label :time %>
-  <%= raw sprintf(
+
+<%= raw sprintf(
             f.date_select(
               :time,
               use_month_numbers: true,
@@ -21,5 +21,6 @@
               default: Date.new(1989, 1, 1),
               date_separator: '%s'),
             '年 ', '月 ') + '日' %>
+
 <%= f.submit '保存'%>
 <%end%>

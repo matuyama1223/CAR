@@ -29,6 +29,6 @@ class Admin::ItemsController < ApplicationController
 
   private
   def caritem_params
-  	params.require(:caritem).permit(:name,:text,:price ,:carimage)
+  	params.require(:caritem).permit(:name,:text,:price ,:carimage,:time)
   end
 end
