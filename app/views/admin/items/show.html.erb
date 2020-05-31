@@ -21,7 +21,11 @@
 		<th>画像</th>
 		<td><%= attachment_image_tag @caritem, :carimage, :fill, 350,350 %></td>
 	</tr>
+	<tr>
+	<td><%#= @caritem.time.strftime("%Y") %></td>
+	</tr>
 </table>
 
 
-<%=link_to"編集", edit_admin_item_path(@caritem)%>
+<%=link_to"編集", edit_admin_item_path(@caritem.id)%>
+<td><%= link_to "削除", admin_item_path(@caritem), method: :delete %></td>

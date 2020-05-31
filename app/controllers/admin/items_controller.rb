@@ -25,6 +25,11 @@ class Admin::ItemsController < ApplicationController
     @caritem.update(caritem_params)
     redirect_to admin_items_path(@caritem)
   end
+  def destroy
+    @caritem = Caritem.find(params[:id])
+    @caritem.destroy
+    redirect_to admin_item_path
+  end
 
 
   private
