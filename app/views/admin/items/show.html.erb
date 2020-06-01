@@ -22,7 +22,8 @@
 		<td><%= attachment_image_tag @caritem, :carimage, :fill, 350,350 %></td>
 	</tr>
 	<tr>
-	<td><%#= @caritem.time.strftime("%Y") %></td>
+		<th>年式</th>
+	<td><%= @caritem.time.strftime("%Y") %></td>
 	</tr>
 </table>
 

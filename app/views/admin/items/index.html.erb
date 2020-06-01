@@ -20,6 +20,7 @@
 <td><%= car.price %></td>
 <td><%= car.text %></td>
 <td><%=link_to"詳細",admin_item_path(car.id)%></td>
+<td><%= link_to "削除", admin_item_path(car), method: :delete %></td>
 
 </tr>
 <%end%>
